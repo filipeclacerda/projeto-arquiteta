@@ -39,19 +39,22 @@ img{
 .right{
     flex: 5 4;
 }
+.wrapper-line{
+    position: relative;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .line-text{
     background-color: #000;
     position: absolute;
-    left: 0;
-    width: 40vw;
+    right: 0;
+    width: 45vw;
+    margin-right: -80px;
     height: 38px;
     display: flex;
     align-items: center;
-    padding-left: 158px;
-    top:458px;
+    padding-left: 200px;
     font-size: 15pt;
     color:#fff
-}
-.space-between-text{
-    margin-bottom: 100px;
 }
