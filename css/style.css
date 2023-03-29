@@ -48,13 +48,14 @@ img{
 .line-text{
     background-color: #000;
     position: absolute;
-    right: 0;
+    left: 0;
     width: 45vw;
     margin-right: -80px;
     height: 38px;
     display: flex;
     align-items: center;
     padding-left: 200px;
+    margin-left: -200px;
     font-size: 15pt;
     color:#fff
 }
