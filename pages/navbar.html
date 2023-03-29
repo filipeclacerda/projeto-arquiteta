@@ -1,0 +1,16 @@
+<nav id="main-nav" class="main-nav">
+    <div class="logo">LOGO</div>
+    <div class="text-nav">
+        <a id="home" href="/" onclick="route()">HOME</a>
+        <strong class="slash">//</strong>
+        <a id="sobre" href="/sobre" onclick="route()">SOBRE</a>
+        <strong class="slash">//</strong>
+        <a id="projetos" href="/projetos" onclick="route()">PROJETOS</a>
+        <strong class="slash">//</strong>
+        <a id="contato" href="/contato" onclick="route()">CONTATO</a>
+    </div>
+</nav>
+
+<script>
+    $('#' + window.location.pathname.replace('/', '')).addClass('active')
+</script>

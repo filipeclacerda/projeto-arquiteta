@@ -1,0 +1,29 @@
+#main-nav {
+    font-size: 15pt;
+    color: #000;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 8px;
+    right: 0px;
+    width: 100vw;
+    height: 200px;
+    top:0;
+}
+#main-nav .text-nav{
+    margin-left: 150px;
+}
+#main-nav a {
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+#main-nav a:hover{
+    font-size: 21px;
+}
+
+#main-nav .active{
+    font-weight: bold;
+}
