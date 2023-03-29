@@ -34,7 +34,24 @@ img{
 }
 .left .text{
     width: 90%;
+    position: relative;
 }
 .right{
     flex: 5 4;
+}
+.line-text{
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 40vw;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding-left: 158px;
+    top:458px;
+    font-size: 15pt;
+    color:#fff
+}
+.space-between-text{
+    margin-bottom: 100px;
 }
