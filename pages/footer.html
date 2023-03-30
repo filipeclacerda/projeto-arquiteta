@@ -1,0 +1,34 @@
+<footer>
+    <div class="wrapper-bottom-nav">
+    <nav id="bottom-nav" class="bottom-nav">
+            <div class="text-nav">
+                <a id="home-bottom" href="/" onclick="route()">HOME</a>
+                <a id="sobre-bottom" href="/sobre" onclick="route()">SOBRE</a>
+                <a id="projetos-bottom" href="/projetos" onclick="route()">PROJETOS</a>
+                <a id="contato-bottom" href="/contato" onclick="route()">CONTATO</a>
+            </div>
+        </nav>
+    </div>
+    <div class="footer-container">
+        <div class="left-footer">
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. At nulla qui vero perspiciatis, incidunt, minima possimus sequi cum necessitatibus ab dolor rerum aliquid architecto tenetur officia dolores nam culpa ex.
+            </div>
+        </div>
+        <div class="middle-footer">
+            <div class="social-icons">
+                <img class='social-icon' src="../assets/whatsapp.png" alt="">
+                <img class='social-icon' src="../assets/instagram.png" alt="">
+                <img class='social-icon' src="../assets/facebook.png" alt="">
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="phone">(43) 9 9919-0010</div>
+            <div class="phone">(43) 9 9108-6030</div>
+            <div class="email">manoela@manoelapostico.arq.br</div>
+        </div>
+    </div>
+    <script>
+        $('#' + window.location.pathname.replace('/', '') + '-bottom').addClass('active')
+    </script>
+</footer>

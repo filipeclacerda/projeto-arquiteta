@@ -21,6 +21,7 @@ const handleLocation = async () => {
   const scriptName = path == '/' ? '/home.js' : `${path}.js`
   $("#page-script").load(`/js${scriptName}`);
   $('#navbar').load('../pages/navbar.html')
+  $('#footer').load('../pages/footer.html')
 };
 
 window.onpopstate = handleLocation;
