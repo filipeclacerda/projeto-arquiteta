@@ -9,7 +9,7 @@
     letter-spacing: 13px;
     right: 0px;
     width: 100vw;
-    height: 280px;
+    height: 250px;
     top:0;
 }
 #main-nav .logo{
@@ -20,21 +20,26 @@
     content: '//';
     margin-right: 40px;
     margin-left: 20px;
-    font-size: 15pt;
+    font-size: 13pt;
 }
 
 #main-nav a {
     text-decoration: none;
-    font-size: 17pt;
+    font-size: 13pt;
     font-weight: 700;
     color: #000;
     transition: .3s ease-in-out;
 }
 #main-nav a:hover{
-    font-size: 19pt;
+    font-size: 15pt;
 }
 
 #main-nav .active{
     font-weight: 800;
-    font-size: 19pt;
+    font-size: 14pt;
+}
+.wrapper-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

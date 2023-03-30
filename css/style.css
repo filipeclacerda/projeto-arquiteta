@@ -2,15 +2,18 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
+body{
+    overflow-x: hidden;
+}
 .content{
-    margin-top: 280px;
-    padding: 30px 150px;
+    margin-top: 250px;
+    padding: 30px 10vw;
 }
 .slash-title{
-    letter-spacing: 10px;
+    letter-spacing: 12px;
     margin-bottom: 40px;
     font-weight: 700;
-    font-size: 18pt;
+    font-size: 13pt;
 }
 .slash-title::before{
     content: '//';
@@ -23,33 +26,37 @@
 .content strong {
     font-size: 15pt;
 }
-.container-text-image{
+.container-text-image-right{
     display: flex;
+    margin-bottom: 130px;
 }
-.left{
-    flex: 4 5;
+.container-text-image-right .left{
+    flex: 5 5;
 }
 img{
     max-width: 100%;
 }
-.text{
-    font-size: 14pt;
+.container-text-image-right .text{
+    font-size: 12pt;
     line-height: 30px;
 }
-.left .text{
-    width: 90%;
+.container-text-image-right .left .text{
+    width: 80%;
     position: relative;
 }
-.right{
-    flex: 5 4;
+.container-text-image-right .right{
+    flex: 5 5;
 }
-.wrapper-line{
+.right img {
+   
+}
+.container-text-image-right .wrapper-line{
     position: relative;
     height: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.line-text{
+.container-text-image-right .line-text{
     background-color: #000;
     position: absolute;
     font-weight: 700;
@@ -57,11 +64,57 @@ img{
     letter-spacing: 4px;
     width: 45vw;
     margin-right: -80px;
-    height: 42px;
+    height: 38px;
     display: flex;
     align-items: center;
-    padding-left: 200px;
-    margin-left: -200px;
-    font-size: 14pt;
+    padding-left: 400px;
+    margin-left: -400px;
+    font-size: 11pt;
+    color:#fff
+}
+
+
+.container-text-image-left{
+    display: flex;
+    text-align: right;
+}
+.container-text-image-left .left{
+    flex: 5 5;
+}
+img{
+    max-width: 100%;
+}
+.container-text-image-left .text{
+    font-size: 12pt;
+    line-height: 30px;
+}
+.container-text-image-left .right .text{
+    margin-left: 100px;
+    position: relative;
+}
+.container-text-image-left .right{
+    flex: 5 5;
+}
+.container-text-image-left .wrapper-line{
+    position: relative;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container-text-image-left .line-text{
+    background-color: #000;
+    position: absolute;
+    font-weight: 700;
+    right: 0;
+    letter-spacing: 4px;
+    width: 45vw;
+    margin-left: -80px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 400px;
+    margin-right: -400px;
+    font-size: 11pt;
     color:#fff
 }
