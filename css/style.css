@@ -41,15 +41,16 @@ img{
     font-size: 12pt;
     line-height: 30px;
 }
+.text{
+    font-size: 12pt;
+    line-height: 30px;
+}
 .container-text-image-right .left .text{
     width: 80%;
     position: relative;
 }
 .container-text-image-right .right{
     flex: 5 5;
-}
-.right img {
-   
 }
 .container-text-image-right .wrapper-line{
     position: relative;
@@ -151,16 +152,15 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55%;
-    height: 30px;
+    width: 65%;
+    height: 40px;
     font-size: 14pt;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .timeline-title{
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     letter-spacing: 12px;
-    margin-bottom: 40px;
     font-weight: 700;
     font-size: 14pt;
 }
@@ -174,18 +174,20 @@ img{
 #previous-button {
     position: absolute;
     left: 0;
+    top: 80px;
     cursor: pointer;
 }
 #next-button{
     position: absolute;
     right: 0;
+    top: 80px;
     cursor: pointer;
 }
 .material-icons-outlined{
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 50px;
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -196,7 +198,7 @@ img{
     direction: ltr;
 }
 .description {
-    width: 600px;
+    width: 540px;
 }
 .buttons-wrapper{
     position: relative;

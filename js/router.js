@@ -18,10 +18,10 @@ const handleLocation = async () => {
   const route = routes[path] || routes[404];
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("main-page").innerHTML = html;
-  const scriptName = path == '/' ? '/home.js' : `${path}.js`
+  const scriptName = path == "/" ? "/home.js" : `${path}.js`;
   $("#page-script").load(`/js${scriptName}`);
-  $('#navbar').load('../pages/navbar.html')
-  $('#footer').load('../pages/footer.html')
+  $("#navbar").load("../pages/navbar.html");
+  $("#footer").load("../pages/footer.html");
 };
 
 window.onpopstate = handleLocation;
