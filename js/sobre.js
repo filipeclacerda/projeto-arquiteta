@@ -1,7 +1,6 @@
 var actualSlide = 0;
 const SLIDES_AMOUNT =
   document.getElementById("slider-timeline").childElementCount - 1;
-const SLIDE_WIDTH = 700;
 
 function nextSlide() {
   if (actualSlide < SLIDES_AMOUNT) {
@@ -21,6 +20,10 @@ function previousSlide() {
 }
 
 function moveSlide() {
-  let moveWidth = "-" + actualSlide * SLIDE_WIDTH + "px";
+  let moveWidth = "-" + actualSlide * $(".slide").width() + "px";
   $("body").get(0).style.setProperty("--margin-slider", moveWidth);
 }
+
+$(window).resize(function () {
+  moveSlide();
+});
