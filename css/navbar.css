@@ -92,3 +92,62 @@
     font-size: 13pt;
     letter-spacing: 13px;
 }
+
+
+
+#home-nav {
+    background-color: #fff;
+    color: #000;
+    height: 38px;
+    right: 0;
+    top:60vh;
+    position: absolute;
+    margin-right: -400px;
+    padding-right: 400px;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+}
+#home-nav a {
+    text-decoration: none;
+    font-size: 13pt;
+    letter-spacing: 13px;
+    font-weight: 700;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+#home-nav a:hover{
+    font-size: 14pt;
+}
+.wrapper-home-nav{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 38px;
+    margin-bottom: 70px;
+}
+#home-nav .active{
+    font-weight: 800;
+    font-size: 14pt;
+}
+#home-nav a:not(:first-child)::before{
+    content: '//';
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: 13pt;
+    letter-spacing: 13px;
+}
+
+#bottom-nav .text-nav {
+    min-width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-nav .text-nav {
+    min-width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

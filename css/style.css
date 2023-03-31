@@ -3,12 +3,17 @@
     font-weight: 400;
 }
 body{
+    margin: 0;
     --margin-slider: 0px;
     overflow-x: hidden;
 }
 .content{
     margin-top: 250px;
     padding: 30px 10vw;
+}
+.content-home{
+    padding: 30px 10vw;
+    margin-top: 80px;
 }
 .slash-title{
     letter-spacing: 12px;
@@ -219,8 +224,8 @@ img{
 .social-icon {
     height: 30px;
     width: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
 }
 .right-footer{
@@ -228,4 +233,18 @@ img{
     text-align: right;
     line-height: 25px;
     flex-direction: column;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.link {
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+}
+.bg-home{
+    background-image: url('../assets/sobre-img.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: contain;
 }
