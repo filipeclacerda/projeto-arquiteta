@@ -1,15 +1,37 @@
 <nav id="main-nav" class="main-nav">
-    <div class="wrapper-nav">
-        <div class="logo"><img src="../assets/logo.png" alt=""></div>
-        <div class="text-nav">
-            <a id="home" href="/" onclick="route()">HOME</a>
-            <a id="sobre" href="/sobre" onclick="route()">SOBRE</a>
-            <a id="projetos" href="/projetos" onclick="route()">PROJETOS</a>
-            <a id="contato" href="/contato" onclick="route()">CONTATO</a>
-        </div>
+  <div class="wrapper-nav">
+    <div class="logo"><img src="../assets/logo.png" alt="" /></div>
+    <div class="text-nav">
+      <a id="home" href="/" onclick="route()">HOME</a>
+      <a id="sobre" href="/sobre" onclick="route()">SOBRE</a>
+      <a id="projetos" href="/projetos" onclick="route()">PROJETOS</a>
+      <a id="contato" href="/contato" onclick="route()">CONTATO</a>
     </div>
+  </div>
+</nav>
+
+<nav id="mobile-nav" class="mobile-nav">
+  <div class="wrapper-mobile-nav">
+    <div class="mobile-logo"><img src="../assets/logo.png" alt="" /></div>
+    <input class="checkbox" type="checkbox" name="" id="" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+    <div class="mobile-text-nav">
+      <li><a id="mobile-home" href="/" onclick="route()">HOME</a></li>
+      <li><a id="mobile-sobre" href="/sobre" onclick="route()">SOBRE</a></li>
+      <li>
+        <a id="mobile-projetos" href="/projetos" onclick="route()">PROJETOS</a>
+      </li>
+      <li>
+        <a id="mobile-contato" href="/contato" onclick="route()">CONTATO</a>
+      </li>
+    </div>
+  </div>
 </nav>
 
 <script>
-    $('#' + window.location.pathname.replace('/', '')).addClass('active')
+  $("#" + window.location.pathname.replace("/", "")).addClass("active");
 </script>
