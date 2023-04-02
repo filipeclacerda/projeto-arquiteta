@@ -14,6 +14,9 @@ body {
   margin-top: 250px;
   padding: 30px 10vw;
 }
+#footer {
+  padding: 30px 10vw;
+}
 .content-home {
   padding: 30px 10vw;
   margin-top: 80px;
@@ -206,11 +209,12 @@ img {
   direction: ltr;
 }
 .description {
-  width: 540px;
+  max-width: 540px;
 }
 .buttons-wrapper {
   position: relative;
   width: 800px;
+  max-width: 800px;
 }
 .footer-container {
   display: flex;
@@ -253,7 +257,7 @@ img {
   background-size: cover;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .container-text-image-right {
     flex-direction: column;
     margin-bottom: 60px;
@@ -323,8 +327,12 @@ img {
     font-size: 10pt !important;
   }
   .timeline-title {
-    font-size: 10pt !important;
+    font-size: 11pt !important;
     margin-bottom: 40px !important;
+  }
+  .line-social-media {
+    width: 100%;
+    justify-content: center;
   }
 }
 .logo-white {
@@ -332,4 +340,38 @@ img {
   left: 13vw;
   top: 15vh;
   position: absolute;
+}
+.contact-info {
+  line-height: 30px;
+}
+.email {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.email:hover {
+  text-decoration: underline;
+}
+
+.container-text-image-right .line-social-media {
+  background-color: #000;
+  position: absolute;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 4px;
+  margin-right: -80px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding-left: 400px;
+  padding-right: 120px;
+  margin-left: -400px;
+  font-size: 11pt;
+  color: #fff;
+  gap: 4vw;
+}
+.social-icon-white {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
 }
