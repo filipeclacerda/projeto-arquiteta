@@ -22,6 +22,7 @@ const handleLocation = async () => {
   $("#page-script").load(`/js${scriptName}`);
   $("#navbar").load("../pages/navbar.html");
   $("#footer").load("../pages/footer.html");
+  window.scrollTo(0, 0);
 };
 
 window.onpopstate = handleLocation;

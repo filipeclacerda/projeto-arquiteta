@@ -224,24 +224,18 @@
   #home-nav {
     display: none;
   }
-  .content {
-    margin-top: 120px !important;
-  }
-  .slash-title {
-    font-size: 11pt !important;
-  }
-  .text {
-    font-size: 11pt !important;
-  }
-  .line-text {
-    font-size: 10pt !important;
-  }
-  .timeline-title {
-    font-size: 10pt !important;
-    margin-bottom: 40px !important;
-  }
   .wrapper-bottom-nav {
     display: none;
+  }
+  .container-text-image-left .line-text {
+    left: 0 !important;
+    right: auto !important;
+    width: auto !important;
+    text-align: left;
+    padding-left: 400px !important;
+    padding-right: 40px !important;
+    margin-left: -400px !important;
+    margin-right: -80px !important;
   }
 }
 .mobile-nav .checkbox {

@@ -309,6 +309,23 @@ img {
   .bg-home {
     height: 100vh;
   }
+  .slash-title {
+    font-size: 11pt !important;
+    text-align: left;
+  }
+  .content {
+    margin-top: 120px !important;
+  }
+  .text {
+    font-size: 11pt !important;
+  }
+  .line-text {
+    font-size: 10pt !important;
+  }
+  .timeline-title {
+    font-size: 10pt !important;
+    margin-bottom: 40px !important;
+  }
 }
 .logo-white {
   width: 270px;
