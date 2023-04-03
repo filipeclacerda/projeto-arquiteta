@@ -375,3 +375,129 @@ img {
   width: 25px;
   cursor: pointer;
 }
+
+/* Estilo do menu de filtro */
+#menu-filtro {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#menu-filtro button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+
+#menu-filtro button.active {
+  background-color: #555;
+}
+
+/* Estilo dos projetos */
+#projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projeto-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.projeto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.projeto-item h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projeto-item p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.projeto-item .categoria {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.categories {
+  background-color: #000;
+  position: absolute;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 4px;
+  width: 60vw;
+  margin-right: -80px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding-left: 400px;
+  padding-right: 40px;
+  margin-left: -400px;
+  font-size: 11pt;
+  color: #fff;
+}
+.category:not(:first-child)::before{
+  content: '//';
+  margin-right: 10px;
+  margin-left: 20px;
+  font-size: 13pt;
+  letter-spacing: 13px;
+  font-weight: 600;
+}
+.category{
+  cursor: pointer;
+  font-size: 11pt;
+  font-weight: 600;
+  letter-spacing: 10px;
+  transition: 0.5s;
+}
+.category:hover{
+  font-weight: 900;
+  font-size: 11.5pt;
+}
+
+.categories-wrapper {
+  position: relative;
+  height: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.category.active{
+  font-size: 12pt;
+  font-weight: 800;
+}

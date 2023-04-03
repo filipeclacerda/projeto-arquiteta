@@ -20,17 +20,21 @@ const handleLocationChange = async () => {
   document.getElementById("main-page").innerHTML = html;
   const scriptName = path == "/" ? "/home.js" : `${path}.js`;
   $("#page-script").load(`/js${scriptName}`);
-  removeActive();
+  $(".menu-item").removeClass("active");
   addActive();
   window.scrollTo(0, 0);
+  if(path == '/projetos'){
+    try{
+      renderProject()
+    }
+    catch (e){
+    }
+  }
 };
 
 window.addEventListener("popstate", handleLocationChange);
 window.route = route;
 
-function removeActive() {
-  $(".menu-item").removeClass("active");
-}
 function addActive() {
   $(`.menu-item[href="${window.location.pathname}"]`).addClass("active");
 }
