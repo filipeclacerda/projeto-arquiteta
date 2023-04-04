@@ -334,6 +334,46 @@ img {
     width: 100%;
     justify-content: center;
   }
+  .categories {
+    flex-direction: column;
+    gap: 26px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto !important;
+    background-color: transparent !important;
+  }
+  .category {
+    background-color: #000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .category:nth-child(1)::before {
+    content: "//";
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 13pt;
+    letter-spacing: 13px;
+    font-weight: 600;
+  }
+  .project-images {
+    margin-top: 250px !important;
+  }
+  .btn-move {
+    letter-spacing: 3px !important;
+    font-size: 11pt !important;
+  }
+  .btn-move::after {
+    margin-left: 5px !important;
+  }
+  .project-image-container:nth-child(1)::before {
+    font-size: 11pt !important;
+    width: 40vw !important;
+  }
+}
+.project-images {
+  margin-top: 50px;
 }
 .logo-white {
   width: 270px;
@@ -471,22 +511,22 @@ img {
   font-size: 11pt;
   color: #fff;
 }
-.category:not(:first-child)::before{
-  content: '//';
+.category:not(:first-child)::before {
+  content: "//";
   margin-right: 10px;
   margin-left: 20px;
   font-size: 13pt;
   letter-spacing: 13px;
   font-weight: 600;
 }
-.category{
+.category {
   cursor: pointer;
   font-size: 11pt;
   font-weight: 600;
   letter-spacing: 10px;
   transition: 0.5s;
 }
-.category:hover{
+.category:hover {
   font-weight: 900;
   font-size: 11.5pt;
 }
@@ -497,7 +537,127 @@ img {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.category.active{
+.category.active {
   font-size: 12pt;
   font-weight: 800;
+}
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-image-container:nth-child(1)::before {
+  content: attr(data-before);
+  position: absolute;
+  bottom: 8%;
+  background-color: #fff;
+  position: absolute;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 4px;
+  width: 28vw;
+  margin-right: -80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  font-size: 13pt;
+  color: #000;
+}
+.project-image-container:nth-child(1) {
+  position: relative;
+  object-fit: cover;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.project-image-container:nth-child(2) {
+  object-fit: cover;
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.project-image-container:nth-child(3) {
+  object-fit: cover;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.project-image-container:nth-child(4) {
+  object-fit: cover;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.project-image-container:nth-child(5) {
+  object-fit: cover;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.project-image-container:nth-child(6) {
+  object-fit: cover;
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.project-image-container:nth-child(7) {
+  object-fit: cover;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+.project-image-container:nth-child(8) {
+  object-fit: cover;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 35vw);
+  grid-gap: 15px;
+}
+
+.move-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn-move {
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
+.btn-move::after {
+  content: "//";
+  width: 0;
+  height: 2px;
+  margin-left: 30px;
+}
+.btn-move:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 1500px) {
+  .categories {
+    width: 80vw !important;
+  }
 }

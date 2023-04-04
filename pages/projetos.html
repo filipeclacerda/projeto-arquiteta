@@ -1,26 +1,39 @@
 <div id="navbar"></div>
 <div class="content">
   <!DOCTYPE html>
-    <script>
-      
-    </script>
-    <div class="categories-wrapper">
-      <div class="categories">
-          <div class="category" id="casas" onclick="setCategoryFilter('CASAS')">CASAS</div>
-          <div class="category" id="interiores" onclick="setCategoryFilter('INTERIORES')">INTERIORES</div>
-          <div class="category" id="comercial" onclick="setCategoryFilter('COMERCIAL')">COMERCIAL</div>
-          <div class="category active" id="todos" onclick="setCategoryFilter()">VER TUDO</div>
+  <script></script>
+  <div class="categories-wrapper">
+    <div class="categories">
+      <div class="category" id="casas" onclick="setCategoryFilter('CASAS')">
+        CASAS
+      </div>
+      <div
+        class="category"
+        id="interiores"
+        onclick="setCategoryFilter('INTERIORES')"
+      >
+        INTERIORES
+      </div>
+      <div
+        class="category"
+        id="comercial"
+        onclick="setCategoryFilter('COMERCIAL')"
+      >
+        COMERCIAL
+      </div>
+      <div class="category active" id="todos" onclick="setCategoryFilter()">
+        VER TUDO
       </div>
     </div>
-    <div>
-      <h2 id="project-name"></h2>
-      <p id="project-description"></p>
-      <p id="project-category"></p>
-      <div id="project-images"></div>
+  </div>
+  <div>
+    <div class="project-images" id="project-images"></div>
+  </div>
+  <div>
+    <div class="move-buttons">
+      <strong class="btn-move" onclick="prevProject()">ANTERIOR</strong>
+      <strong class="btn-move" onclick="nextProject()">PRÓXIMO</strong>
     </div>
-    <div>
-      <button onclick="prevProject()">Previous</button>
-      <button onclick="nextProject()">Next</button>
-    </div>  
+  </div>
   <div id="footer"></div>
 </div>

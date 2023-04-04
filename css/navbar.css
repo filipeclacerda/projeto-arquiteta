@@ -15,6 +15,7 @@
 #main-nav .logo {
   margin-top: 15px;
   min-width: 150px;
+  margin-right: 50px;
 }
 #main-nav a:not(:first-child)::before {
   content: "//";
@@ -192,7 +193,7 @@
 }
 .mobile-logo {
   width: 40%;
-  min-width: 150px;
+  min-width: 200px;
   z-index: 2;
 }
 .wrapper-mobile-nav {
@@ -205,12 +206,13 @@
   min-height: 130px;
   max-height: 130px;
   background-color: #fff;
+  padding-bottom: 7px;
 }
 #mobile-nav .active {
   font-weight: 800;
   font-size: 14pt;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1210px) {
   #main-nav {
     display: none;
   }
