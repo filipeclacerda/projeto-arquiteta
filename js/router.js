@@ -23,14 +23,12 @@ const handleLocationChange = async () => {
   $(".menu-item").removeClass("active");
   addActive();
   window.scrollTo(0, 0);
-  if(path == '/projetos'){
-      renderProject()
-  }
-  else if(path == '/sobre'){
-      renderProjectMin(0)
-  }
-  else if(path == '/'){
-    renderProjectMin(0)
+  if (path == "/projetos") {
+    renderProject();
+  } else if (path == "/sobre") {
+    renderProjectMin(0);
+  } else if (path == "/") {
+    renderHandler();
   }
 };
 

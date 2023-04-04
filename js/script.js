@@ -110,10 +110,10 @@ const projects = [
 
 var actualSlide = 0;
 let SLIDES_AMOUNT = 0;
-waitForElm('#slider-timeline').then((elem)=>{
-    SLIDES_AMOUNT =
-      document.getElementById("slider-timeline").childElementCount - 1;
-})
+waitForElm("#slider-timeline").then((elem) => {
+  SLIDES_AMOUNT =
+    document.getElementById("slider-timeline").childElementCount - 1;
+});
 
 function nextSlide() {
   if (actualSlide < SLIDES_AMOUNT) {
@@ -142,25 +142,37 @@ $(window).resize(function () {
 });
 
 // section ABOUT and HOME
+function renderHandler() {
+  const projects = document.getElementsByClassName("project-images-min");
+  for (let i = 0; i < projects.length; i++) {
+    const project = projects[i];
+    renderProjectMin(Number(project.dataset.number), project);
+  }
+}
 
-function renderProjectMin(index) {
+function renderProjectMin(index, elem = null) {
   const projectMin = projects[index];
-  const projectImagesMin = document.getElementById("project-images-min");
+  const projectImagesMin = elem
+    ? elem
+    : document.getElementById("project-images-min");
 
   // clear previous images
   projectImagesMin.innerHTML = "";
 
   // add new images
-  for (let i = 0; i< projectMin.imagens.length; i++) {
+  for (let i = 0; i < projectMin.imagens.length; i++) {
     const div = document.createElement("div");
     const image = document.createElement("img");
     div.classList.add("project-image-min-container");
-    div.setAttribute("data-before", projectMin.nome + " // " + projectMin.categoria);
+    div.setAttribute(
+      "data-before",
+      projectMin.nome + " // " + projectMin.categoria
+    );
     div.appendChild(image);
     image.classList.add("project-image-min");
     image.src = projectMin.imagens[i];
     projectImagesMin.appendChild(div);
-    if(i == 3){
+    if (i == 3) {
       break;
     }
   }
@@ -227,25 +239,22 @@ function removeActive() {
   $(".category").removeClass("active");
 }
 
-
-
-
 function waitForElm(selector) {
-    return new Promise(resolve => {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
+  return new Promise((resolve) => {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
 
-        const observer = new MutationObserver(mutations => {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
+    const observer = new MutationObserver((mutations) => {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
 }
