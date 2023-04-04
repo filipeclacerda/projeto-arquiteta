@@ -35,9 +35,7 @@ body {
 .title {
   letter-spacing: 8px;
 }
-.content strong {
-  font-size: 15pt;
-}
+
 .container-text-image-right {
   display: flex;
   margin-bottom: 130px;
@@ -638,7 +636,7 @@ img {
   color: #000;
   border: none;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 14pt;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -668,7 +666,7 @@ img {
   object-fit: cover;
 }
 
-.project-image-container:nth-child(1)::before {
+.project-image-min-container:nth-child(1)::before {
   content: attr(data-before);
   position: absolute;
   bottom: 8%;
@@ -722,4 +720,14 @@ img {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 35vw);
   grid-gap: 15px;
+}
+.move-button{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+.btn-move{
+  text-decoration: none;
 }
