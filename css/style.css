@@ -765,3 +765,6 @@ img {
   word-spacing: 100vw;
   color: #000;
 }
+div [onclick] {
+  cursor: pointer;
+}

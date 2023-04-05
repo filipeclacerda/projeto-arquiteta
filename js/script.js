@@ -1,17 +1,23 @@
-/** @format */
-
 const projects = [
   {
     nome: "CASA 1",
     descricao: "Descrição do CASA 1",
     categoria: "CASAS",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
       "../assets/projeto-img-2.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -20,13 +26,21 @@ const projects = [
     nome: "CASA 2",
     descricao: "Descrição do CASA 1",
     categoria: "CASAS",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-4.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-1.png",
       "../assets/projeto-img-4.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-5.png",
     ],
@@ -35,13 +49,21 @@ const projects = [
     nome: "CASA 3",
     descricao: "Descrição do CASA 1",
     categoria: "CASAS",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -50,13 +72,21 @@ const projects = [
     nome: "Projeto 4",
     descricao: "Descrição do Projeto 1",
     categoria: "INTERIORES",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -65,13 +95,21 @@ const projects = [
     nome: "Projeto 5",
     descricao: "Descrição do Projeto 1",
     categoria: "INTERIORES",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -80,13 +118,21 @@ const projects = [
     nome: "Projeto 6",
     descricao: "Descrição do Projeto 1",
     categoria: "INTERIORES",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -95,13 +141,21 @@ const projects = [
     nome: "Projeto 7",
     descricao: "Descrição do Projeto 2",
     categoria: "COMERCIAL",
+    detalhes: "lorem ipsum",
+    cliente: "Cliente teste",
+    imagensModal: [
+      "../assets/projeto-img-1.png",
+      "../assets/projeto-img-4.png",
+      "../assets/projeto-img-6.png",
+      "../assets/projeto-img-6.png",
+    ],
     imagens: [
       "../assets/projeto-img-1.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
       "../assets/projeto-img-5.png",
-      "../assets/projeto-img-2.png",
+      "../assets/projeto-img-4.png",
       "../assets/projeto-img-3.png",
       "../assets/projeto-img-4.png",
     ],
@@ -168,6 +222,10 @@ function renderProjectMin(index, elem = null) {
       "data-before",
       projectMin.nome + " // " + projectMin.categoria
     );
+    console.log(i);
+    if (i == 0) {
+      div.setAttribute("onclick", "modalHandler(" + index + ")");
+    }
     div.appendChild(image);
     image.classList.add("project-image-min");
     image.src = projectMin.imagens[i];
@@ -177,7 +235,6 @@ function renderProjectMin(index, elem = null) {
     }
   }
 }
-
 //section PROJECTS
 let currentProjectIndex = 0;
 let currentCategory = "";
@@ -198,11 +255,14 @@ function renderProject() {
   projectImages.innerHTML = "";
 
   // add new images
-  project.imagens.forEach((imageSrc) => {
+  project.imagens.forEach((imageSrc, index) => {
     const div = document.createElement("div");
     const image = document.createElement("img");
     div.classList.add("project-image-container");
     div.setAttribute("data-before", project.nome + " // " + project.categoria);
+    if (index == 0) {
+      div.setAttribute("onclick", "modalHandler(" + currentProjectIndex + ")");
+    }
     div.appendChild(image);
     image.classList.add("project-image");
     image.src = imageSrc;
