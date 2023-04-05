@@ -1,0 +1,32 @@
+@keyframes slide-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.logo-white,
+.categories,
+.line-social-media {
+  animation: slide-to-right 0.4s ease-in-out;
+}
+.home-nav,
+.start {
+  animation: slide-to-left 0.5s ease-in-out;
+}
+.start-left {
+  animation: slide-to-right 0.4s ease-in-out;
+}
+
+#line-text-1 {
+  animation: slide-to-right 0.4s ease-in-out;
+}

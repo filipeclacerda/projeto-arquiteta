@@ -1,7 +1,7 @@
 const projects = [
   {
     nome: "CASA 1",
-    descricao: "Descrição do CASA 1",
+    descricao: "Descrição da CASA UM",
     categoria: "CASAS",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -23,14 +23,14 @@ const projects = [
     ],
   },
   {
-    nome: "CASA 2",
-    descricao: "Descrição do CASA 1",
+    nome: "CASA DOIS",
+    descricao: "Descrição da CASA 1",
     categoria: "CASAS",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
     imagensModal: [
-      "../assets/projeto-img-1.png",
       "../assets/projeto-img-4.png",
+      "../assets/projeto-img-1.png",
       "../assets/projeto-img-6.png",
       "../assets/projeto-img-6.png",
     ],
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     nome: "CASA 3",
-    descricao: "Descrição do CASA 1",
+    descricao: "Descrição da CASA 1",
     categoria: "CASAS",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -70,7 +70,7 @@ const projects = [
   },
   {
     nome: "Projeto 4",
-    descricao: "Descrição do Projeto 1",
+    descricao: "Descrição da Projeto 1",
     categoria: "INTERIORES",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -93,7 +93,7 @@ const projects = [
   },
   {
     nome: "Projeto 5",
-    descricao: "Descrição do Projeto 1",
+    descricao: "Descrição da Projeto 1",
     categoria: "INTERIORES",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -116,7 +116,7 @@ const projects = [
   },
   {
     nome: "Projeto 6",
-    descricao: "Descrição do Projeto 1",
+    descricao: "Descrição da Projeto 1",
     categoria: "INTERIORES",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -139,7 +139,7 @@ const projects = [
   },
   {
     nome: "Projeto 7",
-    descricao: "Descrição do Projeto 2",
+    descricao: "Descrição da Projeto 2",
     categoria: "COMERCIAL",
     detalhes: "lorem ipsum",
     cliente: "Cliente teste",
@@ -222,7 +222,6 @@ function renderProjectMin(index, elem = null) {
       "data-before",
       projectMin.nome + " // " + projectMin.categoria
     );
-    console.log(i);
     if (i == 0) {
       div.setAttribute("onclick", "modalHandler(" + index + ")");
     }
@@ -318,3 +317,39 @@ function waitForElm(selector) {
     });
   });
 }
+
+function isElementInViewport(elem) {
+  var element = $(elem);
+
+  // Get the scroll position of the page.
+  var scrollElem =
+    navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
+  var viewportTop = $(scrollElem).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  // Get the position of the element on the page.
+  var elemTop = Math.round(element.offset().top);
+  var elemBottom = elemTop + element.height();
+
+  return elemTop < viewportBottom && elemBottom > viewportTop;
+}
+
+// Check if it's time to start the animation.
+function checkAnimation(elementId, className) {
+  var element = $("#" + elementId);
+  // If the animation has already been started
+  if (element.hasClass(className)) return;
+
+  if (isElementInViewport(element)) {
+    // Start the animation
+    element.addClass(className);
+  }
+}
+
+// Capture scroll events
+$(window).scroll(function () {
+  if (window.location.pathname == "/sobre") {
+    checkAnimation("line-text-2", "start");
+    checkAnimation("line-text-3", "start-left");
+  }
+});

@@ -17,10 +17,12 @@
   min-width: 150px;
   margin-right: 50px;
 }
-#main-nav a:not(:first-child)::before {
+strong.slashes {
   content: "//";
   margin-right: 40px;
   margin-left: 20px;
+  font-weight: 800;
+  letter-spacing: 11px;
   font-size: 13pt;
 }
 
@@ -32,7 +34,7 @@
   transition: 0.3s ease-in-out;
 }
 #main-nav a:hover {
-  font-size: 15pt;
+  transform: scale(1.1);
 }
 
 #main-nav .text-nav {
@@ -73,7 +75,7 @@
   transition: 0.3s ease-in-out;
 }
 #bottom-nav a:hover {
-  font-size: 14pt;
+  transform: scale(1.1);
 }
 .wrapper-bottom-nav {
   display: flex;
@@ -85,13 +87,6 @@
 #bottom-nav .active {
   font-weight: 800;
   font-size: 14pt;
-}
-#bottom-nav a:not(:first-child)::before {
-  content: "//";
-  margin-right: 40px;
-  margin-left: 20px;
-  font-size: 13pt;
-  letter-spacing: 13px;
 }
 
 #home-nav {
@@ -116,7 +111,7 @@
   transition: 0.3s ease-in-out;
 }
 #home-nav a:hover {
-  font-size: 14pt;
+  transform: scale(1.1);
 }
 .wrapper-home-nav {
   display: flex;
@@ -128,13 +123,6 @@
 #home-nav .active {
   font-weight: 800;
   font-size: 14pt;
-}
-#home-nav a:not(:first-child)::before {
-  content: "//";
-  margin-right: 40px;
-  margin-left: 20px;
-  font-size: 13pt;
-  letter-spacing: 13px;
 }
 
 #bottom-nav .text-nav {
@@ -171,12 +159,6 @@
   margin-top: 15px;
   height: 100%;
 }
-#mobile-nav a:not(:first-child)::before {
-  content: "//";
-  margin-right: 40px;
-  margin-left: 20px;
-  font-size: 13pt;
-}
 #mobile-nav a {
   text-decoration: none;
   font-size: 13pt;
@@ -185,7 +167,7 @@
   transition: 0.3s ease-in-out;
 }
 #mobile-nav a:hover {
-  font-size: 15pt;
+  transform: scale(1.1);
 }
 #mobile-nav .mobile-text-nav {
   align-items: center;
@@ -312,7 +294,7 @@
 }
 
 .mobile-nav .mobile-text-nav li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
