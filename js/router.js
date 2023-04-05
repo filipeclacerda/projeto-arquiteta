@@ -18,8 +18,6 @@ const handleLocationChange = async () => {
   const route = routes[path] || routes[404];
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("main-page").innerHTML = html;
-  const scriptName = path == "/" ? "/home.js" : `${path}.js`;
-  $("#page-script").load(`/js${scriptName}`);
   $(".menu-item").removeClass("active");
   addActive();
   window.scrollTo(0, 0);

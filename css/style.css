@@ -762,3 +762,16 @@ img {
 div [onclick] {
   cursor: pointer;
 }
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.center h1 {
+  margin-top: 0;
+  font-size: 5vw;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #000;
+}
