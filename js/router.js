@@ -1,3 +1,5 @@
+/** @format */
+
 const route = (event) => {
   event = event || window.event;
   event.preventDefault();
@@ -28,6 +30,7 @@ const handleLocationChange = async () => {
   } else if (path == "/") {
     renderHandler();
   }
+  $("#checkbox").prop('checked', false);
 };
 
 window.addEventListener("popstate", handleLocationChange);

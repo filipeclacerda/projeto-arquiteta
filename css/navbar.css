@@ -281,6 +281,7 @@ strong.slashes {
   transform: translateY(-150%);
   display: flex;
   padding-bottom: 20px;
+  padding-top: 20px;
   z-index: -5;
   flex-direction: column;
   margin-left: -40px;
