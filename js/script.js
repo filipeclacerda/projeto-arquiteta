@@ -154,20 +154,28 @@ function waitForElm(selector) {
   });
 }
 
-function isElementInViewport(elem) {
-  var element = $(elem);
+// function isElementInViewport(elem) {
+//   var element = $(elem);
 
-  // Get the scroll position of the page.
-  var scrollElem =
-    navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
-  var viewportTop = $(scrollElem).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
+//   // Get the scroll position of the page.
+//   var scrollElem =
+//     navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
+//   var viewportTop = $(scrollElem).scrollTop();
+//   var viewportBottom = viewportTop + $(window).height();
 
-  // Get the position of the element on the page.
-  var elemTop = Math.round(element.offset().top);
-  var elemBottom = elemTop + element.height();
+//   // Get the position of the element on the page.
+//   var elemTop = Math.round(element.offset().top);
+//   var elemBottom = elemTop + element.height();
 
-  return elemTop < viewportBottom && elemBottom > viewportTop;
+//   return elemTop < viewportBottom && elemBottom > viewportTop;
+// }
+
+function isElementInViewport(el) {
+  const rect = el[0].getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
 }
 
 // Check if it's time to start the animation.
